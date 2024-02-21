@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scrip.js"></script>
+</head>
+
+<body>
+    <form class="container" >
+        <!--h1 = TÍTULO-->   <!--RECORDAR las ID no pueden repetirse, son únicas-->       
+        <h1>Calculadora de Precios</h1>
+
+        <div id="calculator">
+
+                <label for = "number"> Nº Carillas/Páginas</label>
+                <input id="number" type="number" placeholder="Nº páginas">
+                <br> 
+                <br>
+                
+                <!-- select id = permite seleccionar opciones--> 
+                <select id="select3" name = "select3">
+                    <option>Doble Faz</option>
+                    <option>Simple Faz</option>
+                </select>
+                <br>
+                
+                <select id="select1" name = "select1">
+                    <option>ByN</option>
+                    <option>COLOR</option>
+                </select>
+            <input id = "impresiones" type="text" readonly>
+                <br>
+              
+                <select id="select2" name = "select2">
+                    <option>ANILLADO</option>
+                    <option>SIN ANILLAR</option>
+                </select>
+            <input id = "anillado" type="text" readonly>
+                <br>
+         
+                             
+            <div id="mensaje"></div>
+                <br>
+              
+                <label for = "resultado" >Total</label>
+            <input id = "resultado" type="text" readonly>
+                
+            
+
+            <input id="reset" class="Resetear" type="reset">           
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <label> Valores de Referencia </label>
+                <br>
+                <br>
+
+            <table id=tabla1 class="tabla1">
+                <thead>
+                    <tr>
+                        <th>Impresión</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> COLOR doble faz </td>
+                        <td> $25/carilla </td>
+                    </tr>
+
+                    <tr>
+                        <td>COLOR simple faz </td>
+                        <td>$35</td>
+                    </tr>
+                
+                                       
+                    <tr>
+                        <td> ByN doble faz </td>
+                        <td> $20/carilla </td>
+                    </tr>
+
+                    <tr>
+                        <td>ByN simple faz </td>
+                        <td>$25</td>
+                    </tr>
+             
+                </tbody>
+            </table>
+  
+
+            <table id= tabla2 class="tabla2">
+                <thead>
+                    <tr>
+                        <th>Cantidad de Hojas</th>
+                        <th>Precio Anillado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td> 0 - 120 Hojas </td>
+                        <td> $900 </td>
+                    </tr>
+
+                    <tr>
+                        <td>121 - 200  Hojas </td>
+                        <td>$1000</td>
+                    </tr>
+
+                    <tr>
+                        <td>201 - 250 Hojas </td>
+                        <td>$1100</td>
+                    </tr>
+
+                    <tr>
+                        <td> 251 - 350 Hojas </td>
+                        <td>$1500</td>
+                    </tr>
+
+                    <tr>
+                        <td> 351 - 400 Hojas </td>
+                        <td>$1600</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <br> 
+
+        <label id="hoja"> 1 Hoja = 2 Carillas/Páginas </label>
+            <br>
+            <br>
+
+
+        </div>
+
+        
+    </form>     
+    
+</body>
+</html> 
