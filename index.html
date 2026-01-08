@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scrip.js"></script> 
+</head>
+
+<body>
+    <form class="container" id="calculadoraForm">
+        <h1>🖨️ Calculadora de Precios 🖨️</h1>
+        
+        <div id="calculator">
+            <label for="number">Nº Carillas/Páginas</label>
+            <input id="number" type="tel" inputmode="numeric" pattern="[0-9]*" placeholder="Ingrese el número de páginas">
+            <br><br>
+            
+            <select id="select3" name="select3">
+                <option>Doble Faz</option>
+                <option>Simple Faz</option>
+            </select>
+            <br><br>
+            
+            <div class="grid-container">
+                <div class="grid-cell">
+                    <select id="select1" class="select-impresion select-byn" name="select1" disabled>
+                        <option value="ByN">ByN</option>
+                    </select>
+                </div>
+                <div class="grid-cell">
+                    <input id="impresionesByN" type="text" readonly>
+                </div>
+                <div class="grid-cell"></div> 
+                <div class="grid-cell color-element">
+                    <select id="select1Color" class="select-impresion select-color" name="select1Color" disabled>
+                        <option value="COLOR">COLOR</option>
+                    </select>
+                </div>
+                <div class="grid-cell color-element">
+                    <input id="impresionesColor" type="text" readonly>
+                </div>
+            </div>
+
+            <div class="formato-container">
+                <label class="formato-label" for="formato">FORMATO:</label>
+                <div class="grid-container-formato">
+                    <div>
+                        <select id="formato" name="formato">
+                            <option value="A4">A4</option>
+                            <option value="A5">A5 (Bolsillo)</option>
+                            <option value="Apaisado">Apaisado</option>
+                        </select>
+                    </div>
+                    <div class="spacer"></div>
+                    <div>
+                        <select id="select2" name="select2">
+                            <option>ANILLADO</option>
+                            <option>SIN ANILLAR</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input id="anillado" type="text" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mensaje"></div>
+          
+            <div class="total-container">
+                <div class="total-box byn">
+                    <label>Total ByN</label>
+                    <input id="resultadoByN" type="text" readonly>
+                </div>
+                <div class="total-box color color-element">
+                    <label>Total COLOR</label>
+                    <input id="resultadoColor" type="text" readonly>
+                </div>
+            </div>
+
+            <input id="reset" type="button" value="🔄 Resetear">
+
+            <div class="reference-section">
+                <label>📋 Valores de Referencia</label>
+                <label id="hoja">1 Hoja = 2 Carillas/Páginas</label>
+
+                <div class="tables-grid">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Impresión</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>COLOR doble faz</td>
+                                <td>$50/carilla</td>
+                            </tr>
+                            <tr>
+                                <td>COLOR simple faz</td>
+                                <td>$65</td>
+                            </tr>
+                            <tr>
+                                <td>ByN doble faz</td>
+                                <td>$40/carilla</td>
+                            </tr>
+                            <tr>
+                                <td>ByN simple faz</td>
+                                <td>$50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cantidad de Hojas</th>
+                                <th>Precio Anillado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0 - 120 Hojas</td>
+                                <td>$1150</td>
+                            </tr>
+                            <tr>
+                                <td>121 - 200 Hojas</td>
+                                <td>$1250</td>
+                            </tr>
+                            <tr>
+                                <td>201 - 250 Hojas</td>
+                                <td>$1400</td>
+                            </tr>
+                            <tr>
+                                <td>251 - 350 Hojas</td>
+                                <td>$1800</td>
+                            </tr>
+                            <tr>
+                                <td>351 - 400 Hojas</td>
+                                <td>$2100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
